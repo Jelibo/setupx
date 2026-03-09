@@ -1,0 +1,81 @@
+# ── Core CLI ──────────────────────────────────────────
+brew "git"
+brew "git-lfs"
+brew "gh"              # GitHub CLI
+brew "wget"
+brew "curl"
+brew "jq"              # JSON processor
+brew "yq"              # YAML processor
+brew "fzf"             # fuzzy finder
+brew "ripgrep"         # fast grep
+brew "bat"             # better cat
+brew "eza"             # better ls
+brew "zoxide"          # smarter cd
+brew "tree"
+brew "htop"
+brew "tmux"
+brew "make"
+brew "direnv"          # per-directory env vars
+brew "starship"        # shell prompt
+
+# ── Languages (base, versions via managers) ───────────
+brew "pyenv"
+
+# ── Containers & Kubernetes ───────────────────────────
+cask "docker"          # Docker Desktop
+brew "kubectl"
+brew "helm"
+brew "k9s"             # k8s TUI dashboard
+brew "kind"            # local k8s clusters
+brew "minikube"
+brew "kubectx"         # switch contexts/namespaces
+brew "stern"           # multi-pod log tailing
+brew "kustomize"
+
+# ── Infrastructure / Cloud ────────────────────────────
+brew "terraform"
+brew "terragrunt"
+brew "awscli"
+brew "azure-cli"
+brew "google-cloud-sdk"
+brew "ansible"
+
+# ── Networking & Debugging ────────────────────────────
+brew "httpie"          # curl alternative
+brew "grpcurl"
+brew "nmap"
+brew "mtr"
+
+# ── Databases (CLI) ───────────────────────────────────
+brew "postgresql@16"
+brew "redis"
+brew "mysql"
+brew "mongosh"
+
+# ── GUI Apps (casks) ──────────────────────────────────
+cask "visual-studio-code"
+cask "intellij-idea"       # Java/backend IDE
+cask "iterm2"
+cask "rectangle"           # window management
+cask "tableplus"           # DB GUI
+cask "insomnia"            # REST/GraphQL client
+cask "postman"
+cask "wireshark"
+cask "slack"
+cask "zoom"
+cask "1password"
+cask "google-chrome"
+
+# ── Fonts ─────────────────────────────────────────────
+tap "homebrew/cask-fonts"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-fira-code-nerd-font"
+cask "font-monaspace-nerd-font"
+
+# ── Other Tools ───────────────────────────────────────
+brew "age"
+brew "sops"
+brew "cosign"
+brew "trivy"
+brew "hadolint"
+brew "checkov"
