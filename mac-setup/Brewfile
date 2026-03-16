@@ -1,6 +1,5 @@
 # ── Core CLI ──────────────────────────────────────────
 brew "git"
-brew "git-lfs"
 brew "gh"              # GitHub CLI
 brew "wget"
 brew "curl"

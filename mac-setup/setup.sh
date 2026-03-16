@@ -109,8 +109,12 @@ read -p "Git email: " GIT_EMAIL
 git config --global user.name "$GIT_NAME"
 git config --global user.email "$GIT_EMAIL"
 git config --global init.defaultBranch main
-git config --global pull.rebase true
+git config --global pull.rebase false
 git config --global core.editor "code --wait"
+
+echo "==> Setting up global .gitignore"
+cp "$(dirname "$0")/.gitignore" "$HOME/.gitignore_global"
+git config --global core.excludesfile "$HOME/.gitignore_global"
 
 echo "==> Setting up SSH"
 mkdir -p "$HOME/.ssh"

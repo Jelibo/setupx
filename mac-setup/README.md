@@ -52,6 +52,44 @@ Copy the SSH public key (printed at the end of Step 1, or run `cat ~/.ssh/id_ed2
 
 ---
 
+## Step 3.5: (Optional) Configure Starship Prompt
+
+[Starship](https://starship.rs) is already installed via Homebrew and enabled in `.zshrc`. To customize it, create a config file:
+
+```bash
+mkdir -p ~/.config && touch ~/.config/starship.toml
+cp starship.toml ~/.config/starship.toml
+```
+
+Full reference: https://starship.rs/config/
+
+An example config using custom script:
+
+```toml
+format = """${custom.moon}$all """
+add_newline = false
+
+[line_break]
+disabled = true
+
+[java]
+disabled = true
+
+[git_status]
+disabled = true
+
+[username]
+disabled = true
+
+[custom.moon]
+command = "~/moon.sh"          # Path to your script (chmod +x moon.sh)
+when = "true"                  # Always show the moon
+format = "[$output]($style)"   # How it looks
+style = "bold yellow"          # Optional styling
+```
+
+---
+
 ## Step 4: Manual Post-Setup
 
 These are not automated and must be done manually:

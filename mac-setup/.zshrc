@@ -32,7 +32,6 @@ alias ktxqa='kubectl config use-context qa-eu-west'
 alias ktxprod='kubectl config use-context production-eu-west'
 alias ktxprodus='kubectl config use-context prod-us-east'
 alias ktxdev='kubectl config use-context dev-eu-west'
-alias ktxcp='kubectl config use-context cp-eu-west'
 alias kl='kubectl logs'
 alias kd='kubectl describe'
 alias awsl="aws sso login --profile"
@@ -41,7 +40,7 @@ alias deps="kubectl get deployment"
 alias jobs="kubectl get job"
 alias cms="kubectl get cm"
 
-# Aliases
+# DOCKER
 alias tf="terraform"
 alias dc="docker compose"
 alias dcu="docker compose up"
@@ -50,7 +49,7 @@ alias dcd="docker compose down"
 # Tools
 alias ls="eza --icons"
 alias ll="eza -la --icons"
-alias cat="bat"
+alias cat="batcat"
 
 # JAVA VERSION SWITCHER (macOS)
 function j8()  { export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); java -version; }
@@ -59,11 +58,15 @@ function j17() { export JAVA_HOME=$(/usr/libexec/java_home -v 17);  java -versio
 function j21() { export JAVA_HOME=$(/usr/libexec/java_home -v 21);  java -version; }
 
 # VERSIONS SUMMARY
-alias versions='java -version; docker -v; helm version; gradle -v; kubectl version --client; snowsql -v;'
+alias versions='sdk current java; java -version; docker -v; helm version; gradle -v; kubectl version --client; snowsql -v;'
 
 # HOMEBREW (macOS package manager)
 alias bs="brew search"
 alias bi="brew install"
+
+# CUSTOM
+alias sdkhow="echo $'sdk current java\nsdk use java <version>\nsdk list java'"
+alias ktxhow="echo $'kubectl config get-contexts\nkubectl config use-context <context-name>'"
 
 # Git branch in prompt
 function parse_git_branch() {
