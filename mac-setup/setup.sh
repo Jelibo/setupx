@@ -112,6 +112,9 @@ git config --global init.defaultBranch main
 git config --global pull.rebase false
 git config --global core.editor "code --wait"
 
+git config --global credential.helper=osxkeychain
+git config --global credential.usehttppath=false
+
 echo "==> Setting up global .gitignore"
 cp "$(dirname "$0")/.gitignore" "$HOME/.gitignore_global"
 git config --global core.excludesfile "$HOME/.gitignore_global"

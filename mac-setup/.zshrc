@@ -50,6 +50,7 @@ alias dcd="docker compose down"
 alias ls="eza --icons"
 alias ll="eza -la --icons"
 alias cat="batcat"
+#alias ll="ls -la"
 
 # JAVA VERSION SWITCHER (macOS)
 function j8()  { export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); java -version; }
@@ -58,14 +59,14 @@ function j17() { export JAVA_HOME=$(/usr/libexec/java_home -v 17);  java -versio
 function j21() { export JAVA_HOME=$(/usr/libexec/java_home -v 21);  java -version; }
 
 # VERSIONS SUMMARY
-alias versions='sdk current java; java -version; docker -v; helm version; gradle -v; kubectl version --client; snowsql -v;'
+alias versions='sdk current java; java -version; docker -v; helm version; gradle -v; mvn -v; kubectl version --client; snowsql -v;'
 
 # HOMEBREW (macOS package manager)
 alias bs="brew search"
 alias bi="brew install"
 
 # CUSTOM
-alias sdkhow="echo $'sdk current java\nsdk use java <version>\nsdk list java'"
+alias sdkhow="echo $'sdk current java\nsdk current maven\nsdk current gradle\nsdk use java <version>\nsdk list java'"
 alias ktxhow="echo $'kubectl config get-contexts\nkubectl config use-context <context-name>'"
 
 # Git branch in prompt
